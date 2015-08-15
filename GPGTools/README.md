@@ -82,7 +82,7 @@ Before ``installPackage`` is called several  requirements need to be fulfilled (
 * the pkg-file must be signed with GPGTools's key
 * if passed the xml-file must exist
 
-A signed pkg-file (``Install.pkg``) can be obtained by downloading an [older release of GPGTools](./GPGTools/GPG%20Suite%20-%202013.10.22.dmg).   
+A signed pkg-file (``Install.pkg``) can be obtained by downloading an [older release of GPGTools](./GPG%20Suite%20-%202013.10.22.dmg).   
 Versions after 2014.12-b4 won't work, because the signing key has been replaced to prevent downgrading of fixed installHelper versions to vulnerable ones. 
 
 After fulfilling the pkg-file requirements we want to inject commands via the xml-file path.   
@@ -90,7 +90,7 @@ Therefore we create a  file called `` `dummy` `` and pass it as xml-file to inst
 installHelper will accept it as a valid path and the command ``dummy`` will get executed with elevated rights.  
 So if we put an executable file named ``dummy`` into ``$PATH`` it will get executed.
 
-For futher details check out the full PoC: [CVE-2014-4677.sh](./GPGTools/CVE-2014-4677.sh)
+For futher details check out the full PoC: [CVE-2014-4677.sh](./CVE-2014-4677.sh)
 
-![CVE-2014-4677-PoC](./GPGTools/images/CVE-2014-4677.png)
+![CVE-2014-4677-PoC](./images/CVE-2014-4677.png)
 

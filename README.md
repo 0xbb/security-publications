@@ -1,2 +1,2 @@
 # security-publications
-placeholder
+Published security related stuff. 
